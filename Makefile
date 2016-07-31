@@ -1,4 +1,4 @@
-ALL=01-interactive-prompt 02-using-editline 03-mpc-parser 04-evaluation 05-error
+ALL=01-interactive-prompt 02-using-editline 03-mpc-parser 04-evaluation 05-error 06-sexpr
 CC=cc
 
 all: $(ALL)
@@ -16,6 +16,9 @@ all: $(ALL)
 	$(CC) -o $@ $^ mpc.c -lm -ledit
 
 05-error: 05-error.c
+	$(CC) -o $@ $^ mpc.c -lm -ledit
+
+06-sexpr: 06-sexpr.c
 	$(CC) -o $@ $^ mpc.c -lm -ledit
 
 get:
