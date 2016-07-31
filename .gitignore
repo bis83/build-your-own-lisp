@@ -1,4 +1,9 @@
 *
+
 !Makefile
 !.gitignore
 !*.c
+
+mpc.c
+mpc.h
+
