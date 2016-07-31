@@ -1,4 +1,4 @@
-ALL=01-interactive-prompt 02-using-editline 03-mpc-parser 04-evaluation 05-error 06-sexpr 07-qexpr
+ALL=01-interactive-prompt 02-using-editline 03-mpc-parser 04-evaluation 05-error 06-sexpr 07-qexpr 08-environment
 CC=cc
 
 all: $(ALL)
@@ -22,6 +22,9 @@ all: $(ALL)
 	$(CC) -o $@ $^ mpc.c -lm -ledit
 
 07-qexpr: 07-qexpr.c
+	$(CC) -o $@ $^ mpc.c -lm -ledit
+
+08-environment: 08-environment.c
 	$(CC) -o $@ $^ mpc.c -lm -ledit
 
 get:
