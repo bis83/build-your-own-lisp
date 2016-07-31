@@ -1,4 +1,4 @@
-ALL=01-interactive-prompt 02-using-editline 03-mpc-parser 04-evaluation
+ALL=01-interactive-prompt 02-using-editline 03-mpc-parser 04-evaluation 05-error
 CC=cc
 
 all: $(ALL)
@@ -13,6 +13,9 @@ all: $(ALL)
 	$(CC) -o $@ $^ mpc.c -lm -ledit
 
 04-evaluation: 04-evaluation.c
+	$(CC) -o $@ $^ mpc.c -lm -ledit
+
+05-error: 05-error.c
 	$(CC) -o $@ $^ mpc.c -lm -ledit
 
 get:
